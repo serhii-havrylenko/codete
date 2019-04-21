@@ -29,24 +29,40 @@ export class ImageDetailsStore {
     this.fetchImageDetails();
   }
 
-  @action public fetchImageDetails = async () => {
+  @action public fetchImageDetails = () => {
     const id = this.model.activeImageId;
     if (!id) {
       return;
     }
 
-    this.imageApi
+    return this.imageApi
       .fetchImageDetails(id)
       .then(this.onFetchImagesData)
       .then(this.onFetchResults)
-      .catch(console.log);
+      .catch(this.onFetchError);
   };
 
   @action public onFetchImagesData = (response: Response) => {
+    if (response.status >= 400) {
+      return Promise.reject();
+    }
+
     return response.json();
   };
 
   @action public onFetchResults = (image: Image | null) => {
     this.model.activeImage = image;
+  };
+
+  @action public onFetchError = () => {
+    this.model.activeImage = null;
+  };
+
+  @action public deleteImage = (id: Image['id']) => {
+    if (!id) {
+      return;
+    }
+
+    return this.imageApi.deleteImage(id);
   };
 }

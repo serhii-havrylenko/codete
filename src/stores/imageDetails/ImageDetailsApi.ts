@@ -8,4 +8,15 @@ export class ImageDetailsApi implements ImageDetailsApiInterface {
 
     return fetch(`${RESOURCES_URL}${uri}`);
   };
+
+  public deleteImage = (id: Image['id']) => {
+    const uri = RESOURCES.images.deleteOne.replace(':id', id);
+
+    return fetch(`${RESOURCES_URL}${uri}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  };
 }

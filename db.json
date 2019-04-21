@@ -5,12 +5,14 @@
       "title": "Image 1",
       "created": 1555853943382,
       "details": "long details",
+      "author": "Rob",
       "src": "http://localhost:3333/images/doge.jpg"
     },
     {
       "id": "id-2",
       "title": "Image 2",
       "created": 1555853945381,
+      "author": "Rob",
       "details": "long details\nmultiline\ncomment",
       "src": "http://localhost:3333/images/doge2.jpg"
     },
@@ -19,6 +21,7 @@
       "title": "Image 3",
       "created": 1555853913282,
       "details": "long details",
+      "author": "Jack",
       "src": "http://localhost:3333/images/doge3.jpg"
     }
   ]

@@ -6,4 +6,5 @@ export interface ImagesApiInterface {
 
 export interface ImageDetailsApiInterface {
   fetchImageDetails(id: Image['id']): Promise<Response>;
+  deleteImage(id: Image['id']): Promise<Response>;
 }

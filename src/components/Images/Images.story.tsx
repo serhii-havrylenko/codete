@@ -13,6 +13,7 @@ storiesOf('Images', module).add('default', () => {
       title: text('Image 1 text', 'Image 1'),
       created: 1555853943382,
       details: text('Image 1 details', 'details'),
+      author: 'Rob',
       src: text('Image 1 src', 'https://via.placeholder.com/150'),
     },
     {
@@ -20,6 +21,7 @@ storiesOf('Images', module).add('default', () => {
       title: 'Image 2',
       created: 1555853945381,
       details: 'details',
+      author: 'Rob',
       src: 'https://via.placeholder.com/150',
     },
     {
@@ -27,6 +29,7 @@ storiesOf('Images', module).add('default', () => {
       title: 'Image 3',
       created: 1555853913282,
       details: 'details',
+      author: 'Rob',
       src: 'https://via.placeholder.com/250x150',
     },
   ];

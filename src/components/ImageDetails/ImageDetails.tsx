@@ -52,15 +52,15 @@ class ImageDetails extends React.Component<ImageDetailsProps> {
     const { classes, image } = this.props;
 
     if (!image) {
-      return <div>Nothing to show</div>;
+      return <div>Nothing to show. Image is not found</div>;
     }
 
     return (
       <Card className={classes.card}>
         <CardHeader
           avatar={
-            <Avatar aria-label="Recipe" className={classes.avatar}>
-              Rob
+            <Avatar className={classes.avatar}>
+              {image.author.substring(0, 4)}
             </Avatar>
           }
           action={

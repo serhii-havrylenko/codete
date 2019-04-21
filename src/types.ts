@@ -3,6 +3,7 @@ export interface Image {
   title: string;
   created: number;
   details: string;
+  author: string;
   src: string;
 }
 
