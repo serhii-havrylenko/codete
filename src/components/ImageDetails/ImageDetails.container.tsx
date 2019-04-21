@@ -3,7 +3,6 @@ import * as React from 'react';
 
 import { RoutesEnum } from '../../constants';
 import { Stores } from '../../stores';
-import { Image } from '../../types';
 import Images, { ImageDetailsProps } from './ImageDetails';
 
 const ImagesDetailsContainer = inject<
@@ -12,15 +11,15 @@ const ImagesDetailsContainer = inject<
   Pick<ImageDetailsProps, 'image' | 'onDeleteClick' | 'onEditClick'>,
   {}
 >(({ imageDetails: imageDetailsStore, routing }: Stores) => {
-  const onDeleteClick = (id: Image['id']) => {
-    imageDetailsStore.deleteImage(id);
+  const onDeleteClick = () => {
+    imageDetailsStore.deleteImage();
     routing.push(RoutesEnum.Images);
   };
 
   return {
     image: imageDetailsStore.image,
     onDeleteClick,
-    onEditClick: console.log,
+    onEditClick: imageDetailsStore.editTitle,
   };
 })(observer(Images as React.FunctionComponent<{}>));
 

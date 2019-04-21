@@ -58,11 +58,24 @@ export class ImageDetailsStore {
     this.model.activeImage = null;
   };
 
-  @action public deleteImage = (id: Image['id']) => {
-    if (!id) {
+  @action public deleteImage = () => {
+    if (!this.model.activeImageId) {
       return;
     }
 
-    return this.imageApi.deleteImage(id);
+    return this.imageApi.deleteImage(this.model.activeImageId);
+  };
+
+  @action public editTitle = (title: Image['title']) => {
+    if (!this.model.activeImageId || !title || !this.model.activeImage) {
+      return;
+    }
+
+    this.model.activeImage = {
+      ...this.model.activeImage,
+      title,
+    };
+
+    return this.imageApi.editImageDetails(this.model.activeImage);
   };
 }

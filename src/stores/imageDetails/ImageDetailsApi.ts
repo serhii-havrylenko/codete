@@ -19,4 +19,16 @@ export class ImageDetailsApi implements ImageDetailsApiInterface {
       },
     });
   };
+
+  public editImageDetails = (image: Image) => {
+    const uri = RESOURCES.images.editOne.replace(':id', image.id);
+
+    return fetch(`${RESOURCES_URL}${uri}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(image),
+    });
+  };
 }

@@ -9,6 +9,7 @@ export const RESOURCES = {
   images: {
     all: '/images',
     getOne: '/images/:id',
+    editOne: '/images/:id',
     deleteOne: '/images/:id',
   },
 };
