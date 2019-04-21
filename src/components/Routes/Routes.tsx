@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import { RoutesEnum } from '../../constants';
 import Layout from '../Layout';
-import { FAQ, Images, NotFound } from '../Pages';
+import { FAQ, ImageDetails, Images, NotFound } from '../Pages';
 
 interface RoutesProps {
   routing?: RouterStore;
@@ -19,6 +19,7 @@ class Routes extends React.Component<RoutesProps> {
       <Layout>
         <Switch location={this.props.routing!.location}>
           <Route exact={true} path="/" component={Images} />
+          <Route path={RoutesEnum.ImageDetails} component={ImageDetails} />
           <Route path={RoutesEnum.Images} component={Images} />
           <Route path={RoutesEnum.FAQ} component={FAQ} />
           <Route path="*" component={NotFound} />

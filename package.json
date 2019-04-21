@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "lint": "yarn tslint --project tsconfig.json 'src/**/*.ts{,x}'",
     "start": "react-scripts start",
-    "start:dev-server": "json-server --watch db.json --port 3333",
+    "start:dev-server": "json-server --watch db.json --static ./public/assets --port 3333",
     "storybook": "start-storybook -p 9009 -s public",
     "pretest": "run-p -c tsc lint",
     "test": "CI=true react-scripts test",

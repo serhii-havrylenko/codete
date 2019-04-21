@@ -1,8 +1,9 @@
+import { GalleryModel } from '../../models';
 import { ImagesApi } from './ImagesApi';
 import { ImagesStore } from './ImagesStore';
 
 describe('ImagesStore tests', () => {
-  const modelMock = {
+  const modelMock = ({
     images: [
       {
         id: 'id-1',
@@ -17,7 +18,7 @@ describe('ImagesStore tests', () => {
         title: 'The End',
       },
     ],
-  };
+  } as unknown) as GalleryModel;
   let apiMock: ImagesApi;
   let store: ImagesStore;
 

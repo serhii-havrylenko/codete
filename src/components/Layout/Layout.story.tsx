@@ -5,7 +5,7 @@ import React from 'react';
 
 import Layout from './Layout';
 
-storiesOf('Layout', module).add('to Storybook', () => {
+storiesOf('Layout', module).add('default', () => {
   const routing = ({
     push: action('Navigate to clicked'),
   } as unknown) as RouterStore;
