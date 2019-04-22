@@ -2,6 +2,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
+import ListSubheader from '@material-ui/core/ListSubheader';
 import { StyleRulesCallback, withStyles } from '@material-ui/core/styles';
 import { ClassNameMap } from '@material-ui/core/styles/withStyles';
 import InfoIcon from '@material-ui/icons/Info';
@@ -22,7 +23,7 @@ const styles: StyleRulesCallback = (theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridItem: {
-    maxHeight: 250,
+    maxHeight: 254,
     width: '100% !important',
   },
   gridList: {
@@ -31,6 +32,7 @@ const styles: StyleRulesCallback = (theme) => ({
   },
   img: {
     width: '100%',
+    height: '100%',
     objectFit: 'cover',
   },
   icon: {
@@ -68,6 +70,11 @@ const Images: React.SFC<ImagesProps> = ({ classes, images }) => (
           </GridListTile>
         );
       })}
+      {images.length === 0 && (
+        <ListSubheader className={classes.gridItem}>
+          Nothing to show, pleaes check that API server is running
+        </ListSubheader>
+      )}
     </GridList>
   </div>
 );
