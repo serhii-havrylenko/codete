@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImageDetails /> should match styles 1`] = `
+Object {
+  "actions": Object {
+    "display": "flex",
+    "justifyContent": "flex-end",
+  },
+  "avatar": Object {
+    "backgroundColor": "#f44336",
+  },
+  "card": Object {
+    "maxWidth": "700px",
+  },
+  "media": Object {
+    "objectFit": "cover",
+  },
+}
+`;
+
+exports[`<ImageDetails /> should render and match snapshot with image 1`] = `
+<WithStyles(ImageDetailsUi)
+  image={
+    Object {
+      "author": "Rob",
+      "created": 1555853943382,
+      "details": "details
+next line",
+      "id": "1",
+      "src": "https://via.placeholder.com/150",
+      "title": "Image 1",
+    }
+  }
+  onDeleteClick={[MockFunction]}
+  onEditClick={[MockFunction]}
+>
+  <ImageDetailsUi
+    classes={
+      Object {
+        "actions": "ImageDetailsUi-actions-3",
+        "avatar": "ImageDetailsUi-avatar-4",
+        "card": "ImageDetailsUi-card-1",
+        "media": "ImageDetailsUi-media-2",
+      }
+    }
+    image={
+      Object {
+        "author": "Rob",
+        "created": 1555853943382,
+        "details": "details
+next line",
+        "id": "1",
+        "src": "https://via.placeholder.com/150",
+        "title": "Image 1",
+      }
+    }
+    onDeleteClick={[MockFunction]}
+    onEditClick={[MockFunction]}
+  >
+    <Component
+      className="ImageDetailsUi-card-1"
+    >
+      <div
+        className="ImageDetailsUi-card-1"
+      >
+        <WithStyles(Component)
+          action={
+            <Unknown
+              data-test-id="edit-button"
+              onClick={[Function]}
+            >
+              <pure(EditIcon) />
+            </Unknown>
+          }
+          avatar={
+            <Unknown
+              className="ImageDetailsUi-avatar-4"
+            >
+              Rob
+            </Unknown>
+          }
+          subheader="4/21/2019, 3:39:03 PM"
+          title="Image 1"
+        >
+          <Component
+            action={
+              <Unknown
+                data-test-id="edit-button"
+                onClick={[Function]}
+              >
+                <pure(EditIcon) />
+              </Unknown>
+            }
+            avatar={
+              <Unknown
+                className="ImageDetailsUi-avatar-4"
+              >
+                Rob
+              </Unknown>
+            }
+            classes={
+              Object {
+                "action": "Component-action-5",
+              }
+            }
+            subheader="4/21/2019, 3:39:03 PM"
+            title="Image 1"
+          >
+            <div
+              action={
+                <Unknown
+                  data-test-id="edit-button"
+                  onClick={[Function]}
+                >
+                  <pure(EditIcon) />
+                </Unknown>
+              }
+              avatar={
+                <Unknown
+                  className="ImageDetailsUi-avatar-4"
+                >
+                  Rob
+                </Unknown>
+              }
+              classes={
+                Object {
+                  "action": "Component-action-5",
+                }
+              }
+              subheader="4/21/2019, 3:39:03 PM"
+              title="Image 1"
+            />
+          </Component>
+        </WithStyles(Component)>
+        <Component
+          className="ImageDetailsUi-media-2"
+          component="img"
+          src="https://via.placeholder.com/150"
+          title="Image 1"
+        >
+          <div />
+        </Component>
+        <Component>
+          <div>
+            <Component
+              component="pre"
+            >
+              <div>
+                details
+next line
+              </div>
+            </Component>
+          </div>
+        </Component>
+        <Component
+          className="ImageDetailsUi-actions-3"
+          disableActionSpacing={true}
+        >
+          <div>
+            <Component
+              data-test-id="delete-button"
+              onClick={[Function]}
+            >
+              <button
+                data-test-id="delete-button"
+                onClick={[Function]}
+              >
+                <pure(DeleteIcon)>
+                  <DeleteIcon>
+                    <WithStyles(SvgIcon)>
+                      <SvgIcon
+                        classes={
+                          Object {
+                            "colorAction": "MuiSvgIcon-colorAction-9",
+                            "colorDisabled": "MuiSvgIcon-colorDisabled-11",
+                            "colorError": "MuiSvgIcon-colorError-10",
+                            "colorPrimary": "MuiSvgIcon-colorPrimary-7",
+                            "colorSecondary": "MuiSvgIcon-colorSecondary-8",
+                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-12",
+                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-14",
+                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-13",
+                            "root": "MuiSvgIcon-root-6",
+                          }
+                        }
+                        color="inherit"
+                        component="svg"
+                        fontSize="default"
+                        viewBox="0 0 24 24"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="MuiSvgIcon-root-6"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                          />
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
+                        </svg>
+                      </SvgIcon>
+                    </WithStyles(SvgIcon)>
+                  </DeleteIcon>
+                </pure(DeleteIcon)>
+                Delete
+              </button>
+            </Component>
+          </div>
+        </Component>
+      </div>
+    </Component>
+  </ImageDetailsUi>
+</WithStyles(ImageDetailsUi)>
+`;
+
+exports[`<ImageDetails /> should render and match snapshot without image 1`] = `
+<WithStyles(ImageDetailsUi)
+  image={null}
+  onDeleteClick={[MockFunction]}
+  onEditClick={[MockFunction]}
+>
+  <ImageDetailsUi
+    classes={
+      Object {
+        "actions": "ImageDetailsUi-actions-3",
+        "avatar": "ImageDetailsUi-avatar-4",
+        "card": "ImageDetailsUi-card-1",
+        "media": "ImageDetailsUi-media-2",
+      }
+    }
+    image={null}
+    onDeleteClick={[MockFunction]}
+    onEditClick={[MockFunction]}
+  >
+    <div>
+      Nothing to show. Image is not found
+    </div>
+  </ImageDetailsUi>
+</WithStyles(ImageDetailsUi)>
+`;

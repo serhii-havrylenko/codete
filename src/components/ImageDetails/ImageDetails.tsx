@@ -31,7 +31,7 @@ interface ImageDetailsState {
   titleHasError: boolean;
 }
 
-const styles: StyleRulesCallback = (theme) => ({
+export const styles: StyleRulesCallback = (theme) => ({
   card: {
     maxWidth: '700px',
   },
@@ -53,7 +53,7 @@ const CardHeaderStyled = withStyles({
   },
 })(CardHeader);
 
-class ImageDetails extends React.Component<
+export class ImageDetailsUi extends React.Component<
   ImageDetailsProps,
   ImageDetailsState
 > {
@@ -83,15 +83,24 @@ class ImageDetails extends React.Component<
           action={
             edit ? (
               <div>
-                <IconButton onClick={this.handleOnSaveEditClick}>
+                <IconButton
+                  onClick={this.handleOnSaveEditClick}
+                  data-test-id="save-button"
+                >
                   <SaveIcon />
                 </IconButton>
-                <IconButton onClick={this.handleOnCancelEditClick}>
+                <IconButton
+                  onClick={this.handleOnCancelEditClick}
+                  data-test-id="cancel-button"
+                >
                   <CancelIcon />
                 </IconButton>
               </div>
             ) : (
-              <IconButton onClick={this.handleOnEditClick}>
+              <IconButton
+                onClick={this.handleOnEditClick}
+                data-test-id="edit-button"
+              >
                 <EditIcon />
               </IconButton>
             )
@@ -125,7 +134,10 @@ class ImageDetails extends React.Component<
           <Typography component="pre">{image.details}</Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing={true}>
-          <Button onClick={this.handleOnDeleteClick}>
+          <Button
+            onClick={this.handleOnDeleteClick}
+            data-test-id="delete-button"
+          >
             <DeleteIcon />
             Delete
           </Button>
@@ -168,4 +180,6 @@ class ImageDetails extends React.Component<
   };
 }
 
-export default withStyles(styles)(ImageDetails);
+const ImageDetailsStyled = withStyles(styles)(ImageDetailsUi);
+
+export default ImageDetailsStyled;

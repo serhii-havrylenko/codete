@@ -37,12 +37,12 @@ export class ImageDetailsStore {
 
     return this.imageApi
       .fetchImageDetails(id)
-      .then(this.onFetchImagesData)
+      .then(this.onFetchImageDetailsData)
       .then(this.onFetchResults)
       .catch(this.onFetchError);
   };
 
-  @action public onFetchImagesData = (response: Response) => {
+  @action public onFetchImageDetailsData = (response: Response) => {
     if (response.status >= 400) {
       return Promise.reject();
     }
